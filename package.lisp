@@ -6,5 +6,5 @@
   (:export :case-lambda))
 
 (defpackage :srfi-16-internal
-  (:use :srfi-16 :cl :fiveam :mbe))
-
+  (:use :srfi-16 :cl :fiveam :mbe)
+  (:shadow :lambda))

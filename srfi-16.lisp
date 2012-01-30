@@ -11,7 +11,7 @@
 (define-syntax case-lambda
   (syntax-rules ()
     ((case-lambda)
-     (lambda (&rest args)
+     (lambda args
        (declare (ignore args))
        (error "CASE-LAMBDA without any clauses.")))
     ((case-lambda
@@ -19,7 +19,7 @@
       ?clause1 ***)
      (with ((l (gensym))
             (args (gensym)))
-       (lambda (&rest args)
+       (lambda args
          (let ((l (length args)))
            (case-lambda "CLAUSE" args l
              (?a1 ?e1 ***)
