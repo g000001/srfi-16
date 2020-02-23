@@ -1,4 +1,5 @@
-(cl:in-package :srfi-16-internal)
+(cl:in-package "https://github.com/g000001/srfi-16#internals")
+
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (defun to-proper-lambda-list (list)
@@ -12,6 +13,10 @@
                          ,(cdr last)))))
       (cl:symbol `(cl:&rest ,list)))))
 
+
 (defmacro lambda (args &rest body)
   `(cl:lambda ,(to-proper-lambda-list args)
      ,@body))
+
+
+;;; *EOF*

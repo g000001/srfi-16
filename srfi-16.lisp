@@ -1,10 +1,7 @@
 ;;;; srfi-16.lisp
 
-(cl:in-package :srfi-16-internal)
+(cl:in-package "https://github.com/g000001/srfi-16#internals")
 
-(def-suite srfi-16)
-
-(in-suite srfi-16)
 
 ;; This code is in the public domain.
 
@@ -53,3 +50,6 @@
          (apply (lambda ?al ?e1 ***) ?args)
          (case-lambda "CLAUSE" ?args ?l
            ?clause1 ***)))))
+
+
+;;; *EOF*
